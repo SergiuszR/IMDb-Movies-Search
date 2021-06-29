@@ -28,4 +28,4 @@ npm install
 ## Tech Stack
 
 **Client:** React
-React boiler plate created with `vitejs/app`
+**React boiler plate** created with `vitejs/app`
