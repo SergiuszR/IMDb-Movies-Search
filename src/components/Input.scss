@@ -1,0 +1,44 @@
+.search-form {
+  position: fixed;
+  z-index: 3;
+  top: 90px;
+  left: 50%;
+  transform: translate((-50%, -50%));
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: 50vw;
+    border: none;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 15%);
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    appearance: none;
+    background: white;
+    color: rgba(27, 27, 27, 0.39);
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 300ms ease border-bottom;
+    transition: 300ms ease width;
+    will-change: border-bottom width;
+
+    &::placeholder {
+      font-size: clamp(0.5em, 3vw, 1em);
+      text-align: center;
+      font-family: "Montserrat";
+      color: rgba(27, 27, 27, 0.39);
+    }
+
+    &:focus {
+      transition: 300ms ease border-bottom;
+      width: 90vw;
+      transition: 300ms ease width;
+    }
+  }
+}

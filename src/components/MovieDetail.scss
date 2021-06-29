@@ -1,0 +1,150 @@
+@import "variables";
+
+.movie-card {
+  height: auto;
+  max-height: 90vh;
+  width: 90vw;
+  max-width: 1180px;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: white;
+  font-size: 25px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  z-index: 4;
+  background: rgba(182, 182, 182, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .left-side {
+    display: grid;
+    place-items: center;
+    flex: 1;
+    min-width: 173px;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 250px;
+      // width: 40%;
+      width: 85%;
+    }
+  }
+
+  .right-side {
+    display: flex;
+    flex: 2;
+    flex-flow: column nowrap;
+    min-width: 346px;
+
+    .movie-title {
+      width: 80%;
+
+      h2 {
+        text-align: left;
+        font-size: clamp(0.8em, 3vw, 1.2em);
+
+        span {
+          font-size: 16px;
+          margin-left: 15px;
+          font-style: italic;
+        }
+      }
+    }
+
+    .movie-runtime p {
+      text-align: left;
+      font-size: clamp(0.5em, 3vw, 0.7em);
+    }
+
+    .movie-genres p {
+      text-align: left;
+      margin-bottom: 20px;
+      font-size: clamp(0.5em, 3vw, 0.7em);
+    }
+
+    .movie-plot {
+      width: 90%;
+
+      p {
+        font-size: 14px;
+        text-align: left;
+        line-height: 1.4em;
+      }
+    }
+
+    .movie-stars {
+      width: 90%;
+      p {
+        text-align: left;
+        margin: 20px 0;
+        font-size: clamp(0.5em, 3vw, 0.8em);
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .movie-directors p {
+      text-align: left;
+      font-size: clamp(0.5em, 3vw, 0.9em);
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .movie-rating h1 {
+      text-align: right;
+      margin-right: 20px;
+      font-size: 2.4em;
+      font-size: clamp(1.5em, 5vw, 2.4em);
+      font-weight: 800;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 2em;
+    color: #ffffff;
+    appearance: none;
+    outline: none;
+    font-size: 1.1em;
+    font-family: "Montserrat";
+    font-weight: 600;
+    transition: 400ms ease transform;
+    will-change: transform;
+    background: rgba(164, 191, 201, 0.31);
+    backdrop-filter: blur(20px);
+    border: 1px solid white;
+    border-radius: 10px;
+
+    &:hover {
+      background: rgba(219, 219, 219, 0.411);
+      cursor: pointer;
+    }
+  }
+}
+
+.movie-card--error {
+  @extend .movie-card;
+  font-weight: 600;
+  font-size: 1.3em;
+  color: rgb(252, 70, 70);
+  background-color: white;
+}

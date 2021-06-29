@@ -1,0 +1,71 @@
+@import "variables";
+
+.modal {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background-image: $bg-image;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  // h1 {
+  //   font-size: clamp(1em, 2vw, 2em);
+  //   color: #000;
+  //   text-align: center;
+  //   font-family: "Montserrat";
+  // }
+
+  input {
+    border: none;
+    margin: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.452);
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: clamp(1.3em, 3vw, 2em);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 300ms ease border-bottom;
+    max-width: 400px;
+    width: 80vw;
+    position: relative;
+
+    &::placeholder {
+      font-size: clamp(1em, 3vw, 2em);
+      text-align: center;
+      font-family: "Montserrat";
+      color: rgba(243, 243, 243, 0.603);
+    }
+
+    &:focus {
+      border-bottom: 2px solid rgb(66, 66, 66);
+      transition: 300ms ease border-bottom;
+
+      &::placeholder {
+        visibility: hidden;
+      }
+    }
+  }
+
+  .btn-cta {
+    width: 300px;
+    height: 2.2em;
+    background: $main-color;
+    color: #ffffff;
+    appearance: none;
+    outline: none;
+    border: none;
+    font-size: 1.1em;
+    font-family: "Montserrat";
+    font-weight: 500;
+    transition: 400ms ease all;
+    margin-left: 0;
+  }
+}

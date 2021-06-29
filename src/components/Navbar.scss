@@ -1,0 +1,45 @@
+@import "variables";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background: transparent;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.342);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 15%);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+  border-radius: 0 0 10px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  ul {
+    display: flex;
+    flex-flow: row;
+
+    li {
+      list-style: none;
+      padding: 20px;
+      text-transform: uppercase;
+      font-family: "Montserrat";
+
+      a {
+        font-weight: 700;
+        font-size: clamp(0.5em, 3vw, 1.2em);
+        color: white;
+        transition: 200ms ease color;
+
+        &:hover {
+          color: $main-color;
+          transition: 200ms ease color;
+        }
+      }
+    }
+  }
+}

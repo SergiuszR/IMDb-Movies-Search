@@ -1,0 +1,30 @@
+@import "variables";
+
+.about-us {
+  width: 100vw;
+  height: 100vh;
+  background-image: $bg-image;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: white;
+  font-size: 1.5em;
+  position: fixed;
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  p {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+
+    span {
+      color: rgb(241, 197, 59);
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "variables";
+
+.movie-tile {
+  height: 280px;
+  width: 280px;
+  align-self: flex-end;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+
+  &--top {
+    flex: 2;
+
+    .cover img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 68%;
+    }
+  }
+  &--bottom {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    transition: 300ms ease transform;
+    will-change: transform;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(182, 182, 182, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: none;
+
+    h3 {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      padding: 0 10px;
+      color: white;
+      transition: 300ms ease transform;
+    }
+
+    p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+  }
+
+  &:hover &--bottom {
+    transform: translateY(320px);
+    transition: 300ms ease transform;
+  }
+}

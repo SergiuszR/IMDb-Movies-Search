@@ -1,0 +1,60 @@
+@import "variables";
+
+.library {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  background-image: $bg-image;
+
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+
+  .waiting {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    user-select: none;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .empty {
+    @extend .waiting;
+    color: $main-color;
+    font-size: 1.5em;
+    user-select: none;
+    height: 20%;
+    background-color: white;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 15%);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
+    position: fixed;
+
+    h1 {
+      animation: fading infinite alternate-reverse 2000ms;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes fading {
+  0% {
+    filter: opacity(1);
+    color: inherit;
+    transform: translateX(18px);
+  }
+  100% {
+    filter: opacity(0.9);
+    transform: translateX(-18px);
+    color: #ff0000;
+  }
+}
