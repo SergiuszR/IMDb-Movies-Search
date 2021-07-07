@@ -5,7 +5,7 @@ import "./Library.scss";
 import { motion } from "framer-motion";
 
 function Library() {
-  const APP_URL_OMDB = `http://www.omdbapi.com/?apikey=cb057022`;
+  const APP_URL_OMDB = `https://www.omdbapi.com/?apikey=cb057022`;
 
   const [movies, setMovies] = useState([]);
 

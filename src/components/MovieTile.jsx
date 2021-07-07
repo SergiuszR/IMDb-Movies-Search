@@ -19,6 +19,7 @@ function MovieTile({ title, year, image, id }) {
       `${APP_URL_MOVIE_DETAIL}/${APP_KEY}/${id}/Ratings,`
     );
     const data = await response.json();
+
     setDetails(data);
     setMovieDetails(true);
     scrollLock();
