@@ -1,4 +1,6 @@
-# IMDb Movie Search Databse
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/SergiuszR/IMDb-Movies-Search)
+
+# IMDb Movie Search Databse   
 
 Search for your favorite movies & tv shows using IMDb API.
 
